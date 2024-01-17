@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dragonball:item/dragon_ball_4"
+  }
+}

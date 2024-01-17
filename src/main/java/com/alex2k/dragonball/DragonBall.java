@@ -1,7 +1,9 @@
 package com.alex2k.dragonball;
 
+import com.alex2k.dragonball.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +30,9 @@ public class DragonBall
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+
+
         modEventBus.addListener(this::commonSetup);
 
 
@@ -44,8 +49,16 @@ public class DragonBall
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
-    }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.DRAGON_BALL_1);
+            event.accept(ModItems.DRAGON_BALL_2);
+            event.accept(ModItems.DRAGON_BALL_3);
+            event.accept(ModItems.DRAGON_BALL_4);
+            event.accept(ModItems.DRAGON_BALL_5);
+            event.accept(ModItems.DRAGON_BALL_6);
+            event.accept(ModItems.DRAGON_BALL_7);
+        }
+     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
