@@ -1,6 +1,7 @@
 package com.alex2k.dragonball.item;
 
 import com.alex2k.dragonball.DragonBall;
+import com.alex2k.dragonball.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,6 +25,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.DRAGON_BALL_5.get());
                         pOutput.accept(ModItems.DRAGON_BALL_6.get());
                         pOutput.accept(ModItems.DRAGON_BALL_7.get());
+                        pOutput.accept(ModBlocks.DRAGON_BALL.get());
                     })
                     .build());
 

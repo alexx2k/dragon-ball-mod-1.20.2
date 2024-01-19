@@ -1,5 +1,6 @@
 package com.alex2k.dragonball;
 
+import com.alex2k.dragonball.block.ModBlocks;
 import com.alex2k.dragonball.item.ModCreativeModeTabs;
 import com.alex2k.dragonball.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -34,6 +35,7 @@ public class DragonBall
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
